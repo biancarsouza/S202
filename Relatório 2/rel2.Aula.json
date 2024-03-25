@@ -1,0 +1,39 @@
+[{
+  "_id": {
+    "$oid": "6601b5ba5caf5d84439366df"
+  },
+  "assunto": "Banco de dados II",
+  "professor": "Jonas",
+  "alunos": [
+    "Leonardo",
+    "Francisco",
+    "Arthur",
+    "Diego"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6601b5ba5caf5d84439366e0"
+  },
+  "assunto": "Programação orientada a objetos",
+  "professor": "Chris",
+  "alunos": [
+    "Diego",
+    "Francisco",
+    "Arthur",
+    "Leonardo"
+  ]
+},
+{
+  "_id": {
+    "$oid": "6601b5ba5caf5d84439366e1"
+  },
+  "assunto": "Algoritmos I",
+  "professor": "Ynoguti",
+  "alunos": [
+    "Bianca",
+    "Francisco",
+    "Arthur",
+    "Leonardo"
+  ]
+}]
