@@ -1,0 +1,48 @@
+{
+    "$jsonSchema": {
+        "bsonType": "object",
+        "required": ["corridas", "nota"],
+        "properties": {
+            "corridas": {
+                "bsonType": "array",
+                "description": "Array obrigatório.",
+                "items": {
+                    "bsonType": "object",
+                    "required": ["nota", "distancia", "valor", "passageiro"],
+                    "properties": {
+                        "nota": {
+                            "bsonType": "int",
+                            "description": "Int obrigatório."
+                        },
+                        "distancia": {
+                            "bsonType": "float",
+                            "description": "Float obrigatório."
+                        },
+                        "valor": {
+                            "bsonType": "float",
+                            "description": "Float obrigatório."
+                        },
+                        "passageiro": {
+                            "bsonType": "object",
+                            "required": ["nome", "documento"],
+                            "properties": {
+                                "nome": {
+                                    "bsonType": "string",
+                                    "description": "String obrigatória."
+                                },
+                                "documento": {
+                                    "bsonType": "string",
+                                    "description": "String obrigatória."
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "nota": {
+                "bsonType": "int",
+                "description": "Int obrigatório."
+            }
+        }
+    }
+}
