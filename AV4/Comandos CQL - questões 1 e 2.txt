@@ -1,0 +1,34 @@
+USE estoque;
+
+CREATE TABLE estoque(id BIGINT, nome TEXT, carro TEXT, estante INT, nivel INT, quantidade INT, PRIMARY KEY (id));
+
+// Para verificar se a tabela foi criada com sucesso:
+DESCRIBE TABLES;
+
+INSERT INTO estoque(id, nome, carro, estante, nivel, quantidade) VALUES (5, 'Pistao', 'Mustang', 4, 1, 167);
+INSERT INTO estoque(id, nome, carro, estante, nivel, quantidade) VALUES (4, 'Suspencao', 'Argo', 1, 1, 3500);
+
+// Vendo se a inserção deu certo:
+SELECT * FROM estoque;
+
+// Faça uma busca no banco de dados que os dados do pistão:
+SELECT * FROM estoque WHERE nome = 'Pistao' ALLOW FILTERING;
+
+// Faça uma busca no banco que calcule a média aritmética da quantidade de todas as colunas armazenadas na tabela:
+SELECT AVG(quantidade) FROM estoque;
+
+// Faça uma busca que retorne quantas colunas tem armazenadas na tabela:
+SELECT COUNT(*) FROM estoque;
+
+// Busque  a  maior  e  a  menor  quantidade  de  peças  usando  as  alias "maior quantidade"e "menor quantidade"para a tabela estoque:
+SELECT MAX(quantidade) AS "maior quantidade" FROM estoque;
+SELECT MIN(quantidade) AS "menor quantidade" FROM estoque;
+
+// Faça  uma  busca  que  retorne  os  atributos  nome,  carro  e  quantidade,  onde  a estante seja igual a 3:
+SELECT nome, carro, quantidade FROM estoque WHERE estante = 3 ALLOW FILTERING;
+
+// Faça uma busca que retorne a média aritmética da quantidade onde o nível seja igual a 1:
+SELECT AVG(quantidade) FROM estoque WHERE nivel = 1 ALLOW FILTERING;
+
+// Faça uma busca retornando todos os atributos ondeaestante seja menor do que 3 eonível seja maior do que 4:
+SELECT * FROM estoque WHERE estante < 3 AND nivel > 4 ALLOW FILTERING;
